@@ -1,0 +1,111 @@
+.oc-capsule-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    color: #333;
+    position: relative;
+    border: 1px solid #e0e0e0;
+}
+
+.oc-capsule-status {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.oc-capsule-privacy {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.oc-capsule-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.oc-capsule-date {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.oc-capsule-preview {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.oc-capsule-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.oc-capsule-location::before {
+    content: "📍";
+}
+
+.oc-capsule-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.oc-capsule-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.oc-capsule-btn {
+    background: white;
+    color: #333;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.oc-capsule-btn:hover {
+    background: #f3f4f6;
+}
+
+.oc-capsule-btn-primary {
+    background: #4338CA;
+    color: white;
+    border: none;
+}
+
+.oc-capsule-btn-primary:hover {
+    background: #3730a3;
+}
+
+@media (max-width: 480px) {
+    .oc-capsule-actions {
+        flex-direction: column;
+    }
+}

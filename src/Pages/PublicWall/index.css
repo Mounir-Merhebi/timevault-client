@@ -1,0 +1,381 @@
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #6366F1;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .pw-logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .pw-logo::before {
+            content: "📱";
+            font-size: 1.2rem;
+        }
+
+        .pw-user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #4338CA;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .pw-main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .pw-hero-section {
+            background: white;
+            border-radius: 8px;
+            padding: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .pw-hero-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .pw-hero-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .pw-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pw-stat-item {
+            text-align: center;
+            padding: 1rem;
+            border-radius: 8px;
+            background: #f8fafc;
+        }
+
+        .pw-stat-number {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #4338CA;
+            margin-bottom: 0.5rem;
+        }
+
+        .pw-stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .pw-explore-section {
+            background: white;
+            border-radius: 8px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .pw-explore-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .pw-explore-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .pw-explore-controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .pw-sort-control {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .pw-sort-label {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .pw-sort-select {
+            padding: 0.5rem 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 4px;
+            background: white;
+            color: #333;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .pw-sort-select:focus {
+            outline: none;
+            border-color: #4338CA;
+        }
+
+        .pw-search-input {
+            padding: 0.75rem 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 4px;
+            background: white;
+            color: #333;
+            font-size: 0.9rem;
+            width: 300px;
+        }
+
+        .pw-search-input:focus {
+            outline: none;
+            border-color: #4338CA;
+        }
+
+        .pw-search-input::placeholder {
+            color: #999;
+        }
+
+        .pw-capsules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .pw-capsule-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            border: 1px solid #e5e7eb;
+        }
+
+        .pw-capsule-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pw-capsule-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #4338CA;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .pw-capsule-author {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .pw-capsule-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .pw-capsule-preview {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .pw-capsule-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .pw-capsule-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .pw-capsule-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .pw-btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.9rem;
+            flex: 1;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .pw-btn-primary {
+            background: #4338CA;
+            color: white;
+        }
+
+        .pw-btn-primary:hover {
+            background: #3730a3;
+        }
+
+        .pw-btn-secondary {
+            background: white;
+            color: #333;
+            border: 2px solid #4338CA;
+        }
+
+        .pw-btn-secondary:hover {
+            background: #4338CA;
+            color: white;
+        }
+
+        /* Load More Section */
+        .pw-load-more-section {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .pw-load-more-btn {
+            background: white;
+            color: #4338CA;
+            border: 2px solid #4338CA;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .pw-load-more-btn:hover {
+            background: #4338CA;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #666;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #4338CA;
+        }
+
+        .nav-link.active {
+            color: #4338CA;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .pw-main-content {
+                padding: 1rem;
+            }
+
+            .pw-header-content {
+                padding: 0 1rem;
+            }
+
+            .pw-nav-links {
+                display: none;
+            }
+
+            .pw-hero-section {
+                padding: 2rem;
+            }
+
+            .pw-hero-title {
+                font-size: 2rem;
+            }
+
+            .pw-stats-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .pw-explore-header {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: stretch;
+            }
+
+            .pw-explore-controls {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .pw-search-input {
+                width: 100%;
+            }
+
+            .pw-capsules-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pw-capsule-actions {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pw-hero-section {
+                padding: 1.5rem;
+            }
+
+            .pw-explore-section {
+                padding: 1.5rem;
+            }
+
+            .pw-capsule-card {
+                padding: 1.5rem;
+            }
+        }
+        

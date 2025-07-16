@@ -1,0 +1,318 @@
+        .auth-body {
+            background: #6366F1;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .auth-wrapper {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 6rem;
+            width: 100%;
+            max-width: 960px;
+            min-height: 540px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .auth-brand-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .auth-brand-header h1 {
+            font-size: 4rem;
+            color: #4338CA;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .auth-brand-header p {
+            color: #666;
+            font-size: 1.5rem;
+        }
+
+        .auth-input-field {
+            margin-bottom: 3rem;
+        }
+
+        .auth-input-field label {
+            display: block;
+            margin-bottom: 1rem;
+            color: #333;
+            font-weight: 500;
+            font-size: 1.25rem;
+        }
+
+        .auth-input-field input {
+            width: 100%;
+            padding: 1.5rem 2rem;
+            border: 2px solid #E5E7EB;
+            border-radius: 12px;
+            font-size: 1.25rem;
+            transition: border-color 0.3s ease;
+            background: #F9FAFB;
+        }
+
+        .auth-input-field input:focus {
+            outline: none;
+            border-color: #4338CA;
+            background: white;
+        }
+
+        .auth-input-field input::placeholder {
+            color: #9CA3AF;
+        }
+
+        .auth-submit-button {
+            width: 100%;
+            background: #4338CA;
+            color: white;
+            padding: 1.5rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 2rem;
+        }
+
+        .auth-submit-button:hover {
+            background: #3730A3;
+        }
+
+        .auth-separator {
+            text-align: center;
+            margin: 2.5rem 0;
+            position: relative;
+            color: #9CA3AF;
+            font-size: 1.25rem;
+        }
+
+        .auth-separator::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #E5E7EB;
+            z-index: 1;
+        }
+
+        .auth-separator span {
+            background: white;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .auth-register-prompt {
+            text-align: center;
+            color: #666;
+            font-size: 1.25rem;
+        }
+
+        .auth-register-prompt a {
+            color: #4338CA;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .auth-register-prompt a:hover {
+            text-decoration: underline;
+        }
+
+                .auth-body {
+            background: #6366F1;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .auth-wrapper {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 6rem;
+            width: 100%;
+            max-width: 960px;
+            min-height: 540px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .auth-brand-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .auth-brand-header h1 {
+            font-size: 4rem;
+            color: #4338CA;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .auth-brand-header p {
+            color: #666;
+            font-size: 1.5rem;
+        }
+
+        .auth-input-field {
+            margin-bottom: 3rem;
+        }
+
+        .auth-input-field label {
+            display: block;
+            margin-bottom: 1rem;
+            color: #333;
+            font-weight: 500;
+            font-size: 1.25rem;
+        }
+
+        .auth-input-field input {
+            width: 100%;
+            padding: 1.5rem 2rem;
+            border: 2px solid #E5E7EB;
+            border-radius: 12px;
+            font-size: 1.25rem;
+            transition: border-color 0.3s ease;
+            background: #F9FAFB;
+        }
+
+        .auth-input-field input:focus {
+            outline: none;
+            border-color: #4338CA;
+            background: white;
+        }
+
+        .auth-input-field input::placeholder {
+            color: #9CA3AF;
+        }
+
+        .auth-submit-button {
+            width: 100%;
+            background: #4338CA;
+            color: white;
+            padding: 1.5rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 2rem;
+        }
+
+        .auth-submit-button:hover {
+            background: #3730A3;
+        }
+
+        .auth-separator {
+            text-align: center;
+            margin: 2.5rem 0;
+            position: relative;
+            color: #9CA3AF;
+            font-size: 1.25rem;
+        }
+
+        .auth-separator::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #E5E7EB;
+            z-index: 1;
+        }
+
+        .auth-separator span {
+            background: white;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .auth-register-prompt {
+            text-align: center;
+            color: #666;
+            font-size: 1.25rem;
+        }
+
+        .auth-register-prompt a {
+            color: #4338CA;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .auth-register-prompt a:hover {
+            text-decoration: underline;
+        }
+
+
+        @media (max-width: 480px) {
+            .auth-wrapper {
+                padding: 2rem 1.5rem;
+                margin: 1rem;
+            }
+
+            .auth-brand-header h1 {
+                font-size: 1.75rem;
+            }
+
+            .auth-input-field input {
+                padding: 0.875rem;
+            }
+
+            .auth-submit-button {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .auth-wrapper {
+                padding: 1.5rem 1rem;
+            }
+
+            .auth-brand-header h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .auth-wrapper {
+                padding: 2rem 1.5rem;
+                margin: 1rem;
+            }
+
+            .auth-brand-header h1 {
+                font-size: 1.75rem;
+            }
+
+            .auth-input-field input {
+                padding: 0.875rem;
+            }
+
+            .auth-submit-button {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .auth-wrapper {
+                padding: 1.5rem 1rem;
+            }
+
+            .auth-brand-header h1 {
+                font-size: 1.5rem;
+            }
+        }

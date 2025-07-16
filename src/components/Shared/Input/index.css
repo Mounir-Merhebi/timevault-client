@@ -1,0 +1,38 @@
+        .auth-input-field {
+            margin-bottom: 3rem;
+        }
+
+        .auth-input-field label {
+            display: block;
+            margin-bottom: 1rem;
+            color: #333;
+            font-weight: 500;
+            font-size: 1.25rem;
+        }
+
+        .auth-input-field input {
+            width: 100%;
+            padding: 1.5rem 2rem;
+            border: 2px solid #E5E7EB;
+            border-radius: 12px;
+            font-size: 1.25rem;
+            transition: border-color 0.3s ease;
+            background: #F9FAFB;
+        }
+
+        .auth-input-field input:focus {
+            outline: none;
+            border-color: #4338CA;
+            background: white;
+        }
+
+        .auth-input-field input::placeholder {
+            color: #9CA3AF;
+        }
+ 
+ 
+        @media (max-width: 480px) {
+           .auth-input-field input {
+                padding: 0.875rem;
+            }
+        }
