@@ -1,0 +1,474 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #6366F1;
+    color: #333;
+    line-height: 1.6;
+}
+
+.vc-header {
+    background: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.vc-header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vc-logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.vc-logo::before {
+    font-size: 1.2rem;
+}
+
+.vc-nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.vc-nav-link {
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.25rem 0;
+    position: relative;
+}
+
+.vc-nav-link:hover {
+    color: #4338CA;
+}
+
+.vc-nav-link.active {
+    color: #4338CA;
+    font-weight: 600;
+}
+
+.vc-nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: #4338CA;
+}
+
+.vc-user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #4338CA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.vc-main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.vc-section {
+    background: white;
+    border-radius: 8px;
+    padding: 2.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+}
+
+.vc-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.vc-visual-identity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.vc-capsule-emoji {
+    font-size: 3rem;
+    padding: 1rem;
+    border-radius: 50%;
+    background: #f9fafb;
+    border: 3px solid #e5e7eb;
+}
+
+.vc-capsule-color {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.vc-meta-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eef2f6;
+}
+
+.vc-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: #666;
+    background: #f9fafb;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    border-left: 3px solid #4338CA;
+}
+
+.vc-meta-item .icon {
+    width: 18px;
+    height: 18px;
+    color: #4338CA;
+    flex-shrink: 0;
+}
+
+.vc-meta-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.vc-mood-display {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #f0f4ff;
+    border-radius: 8px;
+    border: 1px solid #e0e7ff;
+}
+
+.vc-mood-text {
+    font-size: 1.1rem;
+    color: #4338CA;
+    font-weight: 600;
+}
+
+.vc-message-content {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    white-space: pre-wrap;
+    background: #fafafa;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.vc-attachment-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eef2f6;
+}
+
+.vc-attachment-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.vc-attachment-container {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 150px;
+    margin-bottom: 1.5rem;
+}
+
+.vc-attachment-container:last-child {
+    margin-bottom: 0;
+}
+
+.vc-attachment-container img {
+    max-width: 100%;
+    max-height: 250px;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.vc-attachment-container audio {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+}
+
+.vc-attachment-container pre {
+    background: #e5e7eb;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    width: 100%;
+    text-align: left;
+    font-family: 'Inter', monospace;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.vc-attachment-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.vc-cover-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.vc-surprise-indicator {
+    background: #667eea;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.vc-surprise-text {
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.vc-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eef2f6;
+}
+
+.vc-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.vc-btn-primary {
+    background: #4338CA;
+    color: white;
+}
+
+.vc-btn-primary:hover {
+    background: #3730a3;
+    transform: translateY(-1px);
+}
+
+.vc-btn-secondary {
+    background: white;
+    color: #333;
+    border: 1px solid #e0e0e0;
+}
+
+.vc-btn-secondary:hover {
+    background: #f3f4f6;
+    transform: translateY(-1px);
+}
+
+.vc-footer {
+    background: white;
+    margin-top: 4rem;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    color: #666;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.vc-footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.vc-footer-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.vc-footer-text {
+    margin-bottom: 1.5rem;
+}
+
+.vc-footer-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.vc-footer-link {
+    color: #4338CA;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.vc-footer-link:hover {
+    color: #3730a3;
+}
+
+@media (max-width: 768px) {
+    .vc-header-content {
+        padding: 0 1rem;
+    }
+
+    .vc-nav-links {
+        display: none;
+    }
+
+    .vc-main-content {
+        padding: 1rem;
+    }
+
+    .vc-section {
+        padding: 1.5rem;
+    }
+
+    .vc-title {
+        font-size: 1.8rem;
+    }
+
+    .vc-visual-identity {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .vc-meta-info {
+        grid-template-columns: 1fr;
+    }
+
+    .vc-actions {
+        flex-direction: column;
+    }
+
+    .vc-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .vc-footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .view-location-section {
+  border-radius: 12px;
+  border: 2px solid #7AB3EF;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(6, 55, 104, 0.1);
+  height: 240px;
+}
+
+.view-location-section iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.vc-attachment-container pre {
+    background: #e5e7eb;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    width: 100%;
+    text-align: left;
+    font-family: 'Inter', monospace; 
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.vc-attachment-pre {
+    white-space: pre-wrap; 
+    word-wrap: break-word; 
+}
+
+}
+
+@media (max-width: 480px) {
+    .vc-section {
+        padding: 1rem;
+    }
+
+    .vc-title {
+        font-size: 1.5rem;
+    }
+
+    .vc-capsule-emoji {
+        font-size: 2.5rem;
+    }
+
+    .vc-capsule-color {
+        width: 50px;
+        height: 50px;
+    }
+}

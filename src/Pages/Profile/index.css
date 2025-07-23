@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #6366F1;
+    color: #333;
+    line-height: 1.8;
+}
+
+.pf-header {
+    background: white;
+    padding: 1.75rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.pf-header-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pf-logo {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.pf-logo::before {
+    font-size: 1.6rem;
+}
+
+.pf-nav-links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.pf-nav-link {
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 1.2rem;
+}
+
+.pf-nav-link:hover {
+    color: #4338CA;
+}
+
+.pf-nav-link.pf-active {
+    color: #4338CA;
+    font-weight: 600;
+}
+
+.pf-user-avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #4338CA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.pf-main-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    gap: 4.5rem;
+}
+
+.pf-profile-sidebar {
+    background: white;
+    border-radius: 18px;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.pf-profile-header {
+    padding: 4.5rem;
+    text-align: center;
+    background: white;
+    color: #333;
+}
+
+.pf-profile-avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #4338CA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.7rem;
+    margin: 0 auto 2.25rem;
+    color: white;
+    font-weight: bold;
+}
+
+.pf-profile-name {
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin-bottom: 1.1rem;
+    color: #333;
+}
+
+.pf-profile-email {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.pf-profile-info {
+    padding: 3.5rem;
+}
+
+.pf-info-item {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    padding: 1.75rem 0;
+    border-bottom: 2px solid #6366F1;
+}
+
+.pf-info-item:last-child {
+    border-bottom: none;
+}
+
+.pf-info-icon {
+    font-size: 1.4rem;
+    width: 30px;
+    text-align: center;
+}
+
+.pf-info-content {
+    flex: 1;
+}
+
+.pf-info-label {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.7rem;
+    font-weight: 500;
+}
+
+.pf-info-value {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.pf-profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.pf-content-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.pf-card-header {
+    padding: 3.5rem;
+    border-bottom: 2px solid #6366F1;
+}
+
+.pf-card-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.pf-card-content {
+    padding: 3.5rem;
+}
+
+.pf-form-group {
+    margin-bottom: 3.5rem;
+}
+
+.pf-form-label {
+    display: block;
+    margin-bottom: 0.95rem;
+    font-weight: 500;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.pf-form-input {
+    width: 100%;
+    padding: 1.75rem;
+    border: 2px solid #6366F1;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    background: white;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+.pf-form-input:focus {
+    outline: none;
+    border-color: #6366F1;
+    box-shadow: 0 0 0 5px rgba(110, 231, 183, 0.35);
+}
+
+.pf-form-input::placeholder {
+    color: #999;
+}
+
+.pf-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.pf-form-actions {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+    margin-top: 3rem;
+}
+
+.pf-btn {
+    padding: 1.5rem 2.75rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.3rem;
+    transition: all 0.3s;
+}
+
+.pf-btn-cancel {
+    background: white;
+    color: #333;
+    border: 1px solid #4338CA;
+}
+
+.pf-btn-cancel:hover {
+    background: #4338CA;
+    color: white;
+}
+
+.pf-btn-save {
+    background: #4338CA;
+    color: white;
+}
+
+.pf-btn-save:hover {
+    background: #3730a3;
+}
+
+.pf-btn-accent {
+    background: #4338CA;
+    color: white;
+}
+
+.pf-btn-accent:hover {
+    background: #3730a3;
+}
+
+@media (max-width: 1024px) {
+    .pf-main-content {
+        grid-template-columns: 1fr;
+        padding: 1.75rem;
+        gap: 1.75rem;
+    }
+
+    .pf-header-content {
+        padding: 0 1.75rem;
+    }
+
+    .pf-nav-links {
+        display: none;
+    }
+
+    .pf-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .pf-profile-header {
+        padding: 2.25rem;
+    }
+
+    .pf-profile-avatar {
+        width: 90px;
+        height: 90px;
+        font-size: 2rem;
+    }
+
+    .pf-form-actions {
+        flex-direction: column;
+    }
+
+    .pf-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .pf-header-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .pf-logo {
+        font-size: 1.4rem;
+    }
+
+    .pf-user-avatar {
+        width: 50px;
+        height: 50px;
+        font-size: 1.1rem;
+    }
+
+    .pf-profile-header {
+        padding: 1.5rem;
+    }
+
+    .pf-profile-avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 1.8rem;
+    }
+
+    .pf-profile-name {
+        font-size: 1.5rem;
+    }
+
+    .pf-card-content {
+        padding: 1.75rem;
+    }
+
+    .pf-card-header {
+        padding: 1.75rem;
+    }
+
+    .pf-form-input {
+        padding: 1.25rem;
+        font-size: 1.2rem;
+    }
+
+    .pf-btn {
+        padding: 1.25rem 1.75rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pf-header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .pf-logo {
+        font-size: 1.2rem;
+    }
+
+    .pf-user-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    .pf-profile-header {
+        padding: 1rem;
+    }
+
+    .pf-profile-avatar {
+        width: 60px;
+        height: 60px;
+        font-size: 1.3rem;
+    }
+
+    .pf-profile-name {
+        font-size: 1.2rem;
+    }
+
+    .pf-card-content {
+        padding: 1rem;
+    }
+
+    .pf-card-header {
+        padding: 1rem;
+    }
+
+    .pf-form-input {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .pf-btn {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}

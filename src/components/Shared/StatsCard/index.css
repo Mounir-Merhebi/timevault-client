@@ -1,0 +1,47 @@
+.db-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.db-stat-card {
+    background: #e5e7eb;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.db-stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.db-stat-number {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.db-capsules-section {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.db-welcome-section {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 480px) {
+    .db-stats-grid {
+        grid-template-columns: 1fr;
+    }
+}

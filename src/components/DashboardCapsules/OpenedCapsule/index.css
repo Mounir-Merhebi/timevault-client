@@ -1,0 +1,152 @@
+.oc-capsule-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    color: #333;
+    position: relative;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    min-height: 220px;
+}
+
+.oc-capsule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.oc-capsule-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 4px;
+}
+
+.oc-capsule-imgs-surprise {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+}
+
+.oc-capsule-privacy,
+.oc-capsule-status {
+    position: static;
+    background: #e0e7ff;
+    color: #4338CA;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
+    text-transform: capitalize;
+}
+
+.oc-capsule-emoji {
+    position: static;
+    font-size: 1.5rem;
+    margin-left: auto;
+}
+
+
+.oc-capsule-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.oc-capsule-date {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.oc-capsule-preview {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.oc-capsule-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 1rem;
+    margin-top: auto;
+}
+
+.oc-capsule-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.oc-capsule-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    justify-content: flex-start;
+}
+
+.oc-capsule-btn {
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+}
+
+.oc-capsule-btn-primary {
+    background-color: #6366F1;
+    color: white;
+    border: 1px solid #6366F1;
+}
+
+.oc-capsule-btn-primary:hover {
+    background-color: #4F46E5;
+    border-color: #4F46E5;
+}
+
+.oc-btn-secondary {
+    background-color: transparent;
+    color: #6366F1;
+    border: 1px solid #6366F1;
+}
+
+.oc-btn-secondary:hover {
+    background-color: #EEF2FF;
+}
+
+.oc-btn-share {
+    background-color: #e0e7ff;
+    color: #4338CA;
+    border: 1px solid #c7d2fe;
+}
+
+.oc-btn-share:hover {
+    background-color: #c7d2fe;
+}
+
+@media (max-width: 480px) {
+    .oc-capsule-actions {
+        flex-direction: column;
+    }
+    .oc-capsule-btn {
+        width: 100%;
+    }
+}
