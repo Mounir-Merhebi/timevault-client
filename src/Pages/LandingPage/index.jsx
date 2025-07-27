@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 import { useNavigate } from "react-router-dom";
-import { Clock, MapPin, Gift, Atom, LockIcon, Mail, Earth, PaintRoller, TimerIcon, Heart, PencilIcon, Calendar, MapPinIcon, MailCheck, Lock, Phone, Smartphone, Image } from 'lucide-react';
+import { Clock, MapPin, Mail, Earth, Heart, PencilIcon, Calendar, MailCheck, Lock, Smartphone, Image } from 'lucide-react';
 
 
 const LandingPage = () => {

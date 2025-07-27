@@ -13,7 +13,7 @@ import ViewShared from "../Pages/ViewUnlisted";
 const MyRoutes = () => {
   return (
     <Routes>
-       <Route path="/auth" element={<Auth/>} />
+      <Route path="/auth" element={<Auth/>} />
       <Route path="/" element={<Landing/>} />
       <Route path="/Profile" element={<Profile/>} />
       <Route path="/PublicWall" element={<PublicWall/>} />
@@ -21,7 +21,6 @@ const MyRoutes = () => {
       <Route path="/ViewCapsule/:id" element={<ViewCapsule />} />
       <Route path="/CreateCapsule" element={<CreateCapsule/>} />
       <Route path="/ViewShared/:UnlistedToken" element={<ViewShared />} />
-
     </Routes>
   );
 };

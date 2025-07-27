@@ -23,12 +23,6 @@ export const useLoginFormLogic = () => {
       const userId = response.data.payload.id;
       const username = response.data.payload.username;
 
-      console.log("Login successful!", response.data);
-
-      if (!token) {
-        throw new Error("No token returned from server.");
-      }
-
       localStorage.setItem("token", token);
       localStorage.setItem("userId", userId);
       localStorage.setItem("username", username);

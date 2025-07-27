@@ -7,7 +7,7 @@ export const useDashboardLogic = () => {
 
   const userId = localStorage.getItem("userId");
   const token = localStorage.getItem("token");
-  const username = localStorage.getItem("username") || "User"; 
+  const username = localStorage.getItem("username"); 
 
   const [capsules, setCapsules] = useState([]);
   const [activeFilter, setActiveFilter] = useState("all");
@@ -19,7 +19,7 @@ export const useDashboardLogic = () => {
 
   useEffect(() => {
     if (!userId || !token) {
-      navigate("/login");
+      navigate("/auth");
       return;
     }
 
@@ -54,7 +54,7 @@ export const useDashboardLogic = () => {
       } catch (error) {
         console.error("Error loading dashboard:", error);
         if (error.response && error.response.status === 401) {
-          navigate("/login");
+          navigate("/auth");
         }
       } finally {
         setIsLoading(false); 

@@ -19,16 +19,13 @@ export const useProfileLogic = () => {
   const [successMessage, setSuccessMessage] = useState(null);
 
   useEffect(() => {
-    setError(null);
-    setSuccessMessage(null);
 
     if (!userId || !token) {
       navigate('/auth');
       setIsLoading(false); 
       return;
     }
-
-    setIsLoading(true);
+    
     axios.get(`http://localhost:8000/api/v0.1/user/Profile/${userId}`, {
       headers: {
         Authorization: `Bearer ${token}`,

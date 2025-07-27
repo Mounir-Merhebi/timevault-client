@@ -4,7 +4,7 @@ import Footer from "../../components/Shared/footer";
 import LockedCapsule from "../../components/DashboardCapsules/LockedCapsule";
 import OpenedCapsule from "../../components/DashboardCapsules/OpenedCapsule";
 import StatsCard from "../../components/Shared/StatsCard";
-import { useNavigate, Link } from "react-router-dom"; 
+import { useNavigate} from "react-router-dom"; 
 import { useDashboardLogic } from './logic';
 
 const Dashboard = () => {
@@ -79,7 +79,6 @@ const Dashboard = () => {
               filteredCapsules.map((capsule, index) =>
                 capsule.is_revealed ? (
                   <OpenedCapsule
-                    key={capsule.id || index} 
                     id={capsule.id}
                     title={capsule.title}
                     openedDate={capsule.reveal_date}
@@ -95,7 +94,6 @@ const Dashboard = () => {
                   />
                 ) : (
                   <LockedCapsule
-                    key={capsule.id || index} 
                     title={capsule.title}
                     reveal_date={capsule.reveal_date}
                     message={capsule.message}

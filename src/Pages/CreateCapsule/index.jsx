@@ -23,8 +23,6 @@ const CreateCapsule = () => {
     revealTime, setRevealTime,
     coverImageBase64, setCoverImageBase64,
     attachedImageBase64, setAttachedImageBase64,
-    audioBase64, setAudioBase64,
-    markdownFile, setMarkdownFile,
     handleFileToBase64,
     handleAudioChange,
     handleMarkdownChange,

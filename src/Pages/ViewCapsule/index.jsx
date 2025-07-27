@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import "./index.css";
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import {
   User, Calendar, Clock, MapPin, Shield, Sparkles, Share2, Home
 } from 'lucide-react';
@@ -11,14 +11,14 @@ import { useViewCapsuleLogic } from './logic';
 const ViewCapsule = () => {
   const componentRef = useRef(null);
   const { id } = useParams();
-  const navigate = useNavigate();
 
   const {
     capsule,
     isLoading,
     getMoodDisplay,
     getAudioUrl,
-    markdownContent, 
+    getImageUrl, 
+    markdownContent,
     handleDownloadPdf,
   } = useViewCapsuleLogic(id);
 
@@ -28,11 +28,14 @@ const ViewCapsule = () => {
 
   const borderColorStyle = { border: `6px solid ${capsule.custom_color}` };
   const audioSrc = getAudioUrl(capsule.audio_file_url);
+  const coverImageSrc = getImageUrl(capsule.cover_image_url, 'private'); 
+  const mediaImageSrc = getImageUrl(capsule.media_image_url, 'private'); 
+
 
   return (
     <div>
       <Navbar activeLink="ViewCapsule" />
-        <main className="vc-main-content" ref={componentRef}>
+        <main className="vc-main-content">
         <section className="vc-section" style={borderColorStyle}>
           <h1 className="vc-title">{capsule.title}</h1>
 
@@ -41,7 +44,7 @@ const ViewCapsule = () => {
           </div>
 
           <img
-            src={`http://127.0.0.1:8000/api/v0.1/user/app/private/images/${capsule.cover_image_url?.split('/').pop()}`}
+            src={coverImageSrc}
             alt="Time Capsule"
             className="cc-preview-img"
           />
@@ -85,18 +88,17 @@ const ViewCapsule = () => {
           <div className="vc-attachment-section">
             <h3 className="vc-attachment-title">📎 Attached Content</h3>
 
-            {/* Display image if available */}
             {capsule.media_image_url && (
                 <div className="vc-attachment-container">
                     <img
-                        src={`http://127.0.0.1:8000/api/v0.1/user/app/private/images/${capsule.media_image_url.split('/').pop()}`}
+                        src={mediaImageSrc}
                         alt="Attached media"
                     />
                     <p className="vc-attachment-label">Attached Image</p>
                 </div>
             )}
 
-   
+
             {audioSrc && (
               <div className="vc-attachment-container">
                 <audio controls>
@@ -107,7 +109,7 @@ const ViewCapsule = () => {
               </div>
             )}
 
-      
+
             {markdownContent && (
               <div className="vc-attachment-container">
                 <pre className="vc-attachment-pre">{markdownContent}</pre>

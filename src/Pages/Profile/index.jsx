@@ -2,8 +2,11 @@ import "./index.css";
 import Navbar from "../../components/Shared/navbar";
 import { CircleUser } from 'lucide-react';
 import { useProfileLogic } from './logic';
+import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
+  const navigate = useNavigate();
+
   const {
     formData,
     isLoading,
@@ -12,14 +15,6 @@ const Profile = () => {
     handleChange,
     handleSubmit,
   } = useProfileLogic();
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <p className="text-xl text-gray-700">Loading profile...</p>
-      </div>
-    );
-  }
 
   return (
     <div>
@@ -50,13 +45,13 @@ const Profile = () => {
             <div className="pf-card-content">
         
               {successMessage && (
-                <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
-                  <span className="block sm:inline">{successMessage}</span>
+                <div>
+                  <span>{successMessage}</span>
                 </div>
               )}
               {error && (
-                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
-                  <span className="block sm:inline">{error}</span>
+                <div>
+                  <span>{error}</span>
                 </div>
               )}
 
@@ -95,7 +90,7 @@ const Profile = () => {
                   />
                 </div>
                 <div className="pf-form-actions">
-                  <button type="button" className="pf-btn pf-btn-cancel" onClick={() => window.history.back()}>
+                  <button type="button" className="pf-btn pf-btn-cancel" onClick={() => navigate(-1)}>
                     Cancel
                   </button>
                   <button type="submit" className="pf-btn pf-btn-save" disabled={isLoading}>

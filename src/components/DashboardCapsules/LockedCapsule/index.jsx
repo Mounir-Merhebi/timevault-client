@@ -2,7 +2,6 @@ import "./index.css";
 import { useLockedCapsuleLogic } from './logic'; 
 
 const LockedCapsule = ({
-    id,
     title = "My Future Self",
     reveal_date = "2025-01-01",
     gps_latitude = "0.0",

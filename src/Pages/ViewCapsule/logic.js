@@ -32,7 +32,7 @@ export const useViewCapsuleLogic = (capsuleId) => {
           const markdownFileName = res.data.payload.text_note.split('/').pop();
           const markdownRes = await axios.get(`http://127.0.0.1:8000/api/v0.1/app/private/notes/${markdownFileName}`);
           setMarkdownContent(markdownRes.data);
-          console.log("Fetched markdown content:", markdownRes.data); 
+          console.log("Fetched markdown content:", markdownRes.data);
         } else {
             setMarkdownContent(null);
         }
@@ -67,6 +67,12 @@ export const useViewCapsuleLogic = (capsuleId) => {
     return `http://127.0.0.1:8000/api/v0.1/app/private/audios/${fileName}`;
   }, []);
 
+  const getImageUrl = useCallback((imagePathFromDb, type) => {
+    if (!imagePathFromDb) return null;
+    const fileName = imagePathFromDb.split('/').pop();
+      return `http://127.0.0.1:8000/api/v0.1/user/app/private/images/${fileName}`;
+  }, []);
+
 
   const handleDownloadPdf = useCallback((componentCurrentRef, capsuleTitle) => {
     if (!componentCurrentRef) return console.error("Nothing to capture!");
@@ -99,7 +105,8 @@ export const useViewCapsuleLogic = (capsuleId) => {
     isLoading,
     getMoodDisplay,
     getAudioUrl,
-    markdownContent, 
+    getImageUrl, 
+    markdownContent,
     handleDownloadPdf,
   };
 };

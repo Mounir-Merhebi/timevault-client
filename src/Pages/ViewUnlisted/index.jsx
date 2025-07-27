@@ -14,6 +14,7 @@ const ViewCapsule = () => {
     capsule,
     isLoading,
     getMoodDisplay,
+    markdownContent, 
     getAudioUrl,
     handleDownloadPdf,
   } = useUnlistedViewCapsuleLogic(UnlistedToken);
@@ -95,6 +96,14 @@ const ViewCapsule = () => {
                 <p className="vc-attachment-label">Voice note</p>
               </div>
             )}
+
+            {markdownContent && (
+              <div className="vc-attachment-container">
+                <pre className="vc-attachment-pre">{markdownContent}</pre>
+                <p className="vc-attachment-label">Attached Notes (Markdown)</p>
+              </div>
+            )}
+ 
           </div>
 
           <div className="vc-actions">

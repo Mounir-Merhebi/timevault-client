@@ -1,4 +1,3 @@
-import react from "react";
 import './Styles/App.css';
 import MyRoutes from "./routes/route";
 

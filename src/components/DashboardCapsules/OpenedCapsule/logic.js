@@ -6,10 +6,6 @@ export const useOpenedCapsuleLogic = (id, unlistedToken) => {
   const [feedbackMessage, setFeedbackMessage] = useState(""); 
 
   const handleShare = useCallback(() => {
-    if (!unlistedToken) {
-      setFeedbackMessage("Unlisted token not available.");
-      return;
-    }
 
     const shareLink = `http://localhost:3000/ViewShared/${unlistedToken}`;
     navigator.clipboard.writeText(shareLink)
@@ -32,7 +28,7 @@ export const useOpenedCapsuleLogic = (id, unlistedToken) => {
       peaceful: "🕊️ Peaceful",
       curious: "🔍 Curious"
     };
-    return moods[mood] || mood;
+    return moods[mood];
   }, []);
 
   const handleOpen = useCallback(() => {

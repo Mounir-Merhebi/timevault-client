@@ -8,12 +8,25 @@ export const useUnlistedViewCapsuleLogic = (unlistedToken) => {
   const navigate = useNavigate(); 
   const [capsule, setCapsule] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [markdownContent, setMarkdownContent] = useState(null);
 
   useEffect(() => {
     const fetchCapsule = async () => {
       try {
         const res = await axios.get(`http://localhost:8000/api/v0.1/capsule/${unlistedToken}`);
         setCapsule(res.data.payload);
+
+
+
+          if (res.data.payload.text_note) {
+          const markdownFileName = res.data.payload.text_note.split('/').pop();
+          const markdownRes = await axios.get(`http://127.0.0.1:8000/api/v0.1/app/private/notes/${markdownFileName}`);
+          setMarkdownContent(markdownRes.data);
+          console.log("Fetched markdown content:", markdownRes.data); 
+        } else {
+            setMarkdownContent(null);
+        }
+
       } catch (err) {
         console.error("Failed to fetch capsule:", err);
       } finally {
@@ -82,6 +95,7 @@ export const useUnlistedViewCapsuleLogic = (unlistedToken) => {
     isLoading,
     getMoodDisplay,
     getAudioUrl,
+    markdownContent, 
     handleDownloadPdf,
     navigate 
   };

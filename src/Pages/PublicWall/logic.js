@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -18,7 +18,7 @@ export const usePublicWallLogic = () => {
     const token = localStorage.getItem("token");
 
     if (!token) {
-      navigate("/login");
+      navigate("/auth");
       return;
     }
 
@@ -48,7 +48,7 @@ export const usePublicWallLogic = () => {
     fetchCapsules();
   }, [navigate]);
 
-  const filteredCapsules = useMemo(() => {
+  const filteredCapsules = (() => {
     let result = [...capsules];
 
     if (filters.location !== "All") {
@@ -69,19 +69,15 @@ export const usePublicWallLogic = () => {
       const cutoffDate = new Date(now.setDate(now.getDate() - daysAgo));
       result = result.filter((c) => new Date(c.reveal_date) >= cutoffDate);
     }
+
     return result;
-  }, [filters, capsules]);
+  })();
 
-  const uniqueLocations = useMemo(() => {
-    return ["All", ...new Set(capsules.map((c) => c.location).filter(Boolean))];
-  }, [capsules]);
-
-  const uniqueMoods = useMemo(() => {
-    return ["All", ...new Set(capsules.map((c) => c.mood).filter(Boolean))];
-  }, [capsules]);
+  const uniqueLocations = ["All", ...new Set(capsules.map((c) => c.location).filter(Boolean))];
+  const uniqueMoods = ["All", ...new Set(capsules.map((c) => c.mood).filter(Boolean))];
 
   const handleFilterChange = useCallback((filterName, value) => {
-    setFilters(prev => ({ ...prev, [filterName]: value }));
+    setFilters((prev) => ({ ...prev, [filterName]: value }));
   }, []);
 
   return {

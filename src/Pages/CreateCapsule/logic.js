@@ -94,11 +94,9 @@ export const useCreateCapsuleLogic = () => {
         }
       );
       console.log("Capsule created:", data);
-      alert("Capsule created successfully!");
       navigate("/Dashboard");
     } catch (err) {
       console.error("Create capsule error:", err);
-      alert("Something went wrong creating your capsule. Check console.");
     }
   }, [
     title,
@@ -130,8 +128,6 @@ export const useCreateCapsuleLogic = () => {
     revealTime, setRevealTime,
     coverImageBase64, setCoverImageBase64,
     attachedImageBase64, setAttachedImageBase64,
-    audioBase64, setAudioBase64,
-    markdownFile, setMarkdownFile,
     handleFileToBase64,
     handleAudioChange,
     handleMarkdownChange,
